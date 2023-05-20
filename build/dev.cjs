@@ -4,15 +4,14 @@ const WebpackDevServer = require('webpack-dev-server');
 
 const baseConfig = require('./webpack.base.cjs');
 const currentConfig = require('../build.config.cjs');
-
 const finalConfig = merge(baseConfig, currentConfig);
 
 const compiler = webpack(finalConfig);
-const devServerOptions = { ...finalConfig.devServer, open: true };
+const devServerOptions = { ...finalConfig.devServer, open: false };
 const server = new WebpackDevServer(devServerOptions, compiler);
 
 const runServer = async () => {
-  console.log('Starting server...');
+  console.log('Starting server...\n');
   await server.start();
 };
 

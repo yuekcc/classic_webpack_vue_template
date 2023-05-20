@@ -2,7 +2,7 @@
 
 >需求 nodejs >= 18
 
-适应用于 SPA、MPA 应用开发，内置：
+适应用于 SPA、MPA 应用开发，内置功能：
 
 - vue
 - eslint
